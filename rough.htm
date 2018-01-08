@@ -1,0 +1,38 @@
+<html><head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<script>
+$(document).ready(function() {
+    $('.slideshow1').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+$(document).ready(function() {
+    $('.slideshow2').cycle({ 
+    fx:     'fade', 
+    speed:   300, 
+    timeout: 3000, 
+    next:   '.slideshow2', 
+    pause:   1 
+});
+});
+</script>
+</head>
+<body>
+	<div class="slideshow1">
+		<img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" />
+		<img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" />
+		<img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" />
+		<img src="http://malsup.github.com/images/beach4.jpg" width="200" height="200" />
+		<img src="http://malsup.github.com/images/beach5.jpg" width="200" height="200" />
+	</div>
+    	<div class="slideshow2" class="pics" style="position:relative;">
+		<img src="http://malsup.github.com/images/beach1.jpg" width="200" height="200" style="position:absolute; dispay:none; top:0px; left: 0px; z-index:3; opacity:0; width:200px; height:200px;"/>
+		<img src="http://malsup.github.com/images/beach2.jpg" width="200" height="200" style="position:absolute; dispay:none; top:0px; left: 0px; z-index:3; opacity:0; width:200px; height:200px;" />
+		<img src="http://malsup.github.com/images/beach3.jpg" width="200" height="200" style="position:absolute; dispay:none; top:0px; left: 0px; z-index:3; opacity:0; width:200px; height:200px;"/>
+		<img src="http://malsup.github.com/images/beach4.jpg" width="200" height="200" style="position:absolute; dispay:none; top:0px; left: 0px; z-index:3; opacity:0; width:200px; height:200px;"/>
+		<img src="http://malsup.github.com/images/beach5.jpg" width="200" height="200" style="position:absolute; dispay:none; top:0px; left: 0px; z-index:3; opacity:0; width:200px; height:200px;"/>
+	</div>
+
+    </body></html>

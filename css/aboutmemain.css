@@ -1,0 +1,361 @@
+* { margin: 0; padding: 0; }
+html{
+    background: linear-gradient(#FEC3A6,#CDEAC0);
+}
+
+p,h2{
+    margin:0; padding:0;
+    font-size:2em;
+}
+
+h2{
+    font-size:3em;
+    text-align: center;
+    font-weight: bold;
+    padding-top:10px;
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 10px 
+}
+
+body{
+    max-width:1500px;
+    margin: 0 auto 0;
+}
+.panel{
+    height:85.4vh;
+    min-height: 750px;
+    margin:0px;
+    padding:50px;
+    padding-top: 150px;
+    border-bottom: 1.5px #ebebeb solid;
+}
+
+
+#panel1{ 
+    background: #EFE9AE;
+    height:90vh;
+    padding-top: 0px;
+}
+
+#panel2{
+    background: #FBD1A2; 
+}
+
+#panel3{
+    background: #C7D9B7;
+}
+#panel4{
+    background: #F3E1DD;
+}
+#panel5{
+    background: #CCB69B;
+}
+#panel6{
+    background: #F7D4BC;
+}
+.aboutme{
+    z-index: 2;
+    height:90px;
+}
+.home{
+    z-index:3;
+    position: fixed;
+    padding: 10px;
+    opacity:0;
+    animation: home 2s 2s infinite;
+}
+
+@keyframes home{
+    0%{opacity:.6}
+    50%{opacity: .7}
+    100%{opacity:.6;}
+}
+.quote{    
+    height:0%;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color: black;
+    font-size:4em;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FFD0C3;
+    padding-top:2vh;
+    border-bottom: 5px solid #FFD0C3;
+    background: #DBCFB0;
+    margin: 0px;
+    letter-spacing: 1px;
+    animation: appear 1s;
+}
+
+@keyframes appear{
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.myquote{
+    color:#AC8C7E;
+    font-size: 2em;
+    float: right;
+    width: 30%;
+    margin-left: 10%;
+    line-height: 2em;
+    text-align: right;
+    letter-spacing: 1px;
+    opacity:0;
+    transform: translateX(-200px);
+    transition: all 1s ease-out;
+}
+
+.myquote.fade-in-left {
+    opacity:1;
+    transform: translateX(0px);
+}
+
+#snowfall {
+  width: 100%;
+    height: 100vh;
+}
+
+.mypic{
+    border-radius: 50%;
+    box-shadow: 5px -5px 10px #DBCFB0;
+    width: 50%;
+    max-width:500px;
+    border: 5px double #FFD0C3;
+    position: absolute;
+    overflow: hidden;
+    top:0;
+    bottom:0;
+    margin:auto;
+    margin-left: 45%;
+    z-index:1;
+}
+a{
+    text-decoration: none;
+    color:firebrick;
+}
+.nextpage{
+    transform: rotate(90deg);
+    border: 4px solid #CEAC8F;
+    border-radius: 100%;
+    padding:10px;
+    font-size: 1.5em;
+    animation-name: blinkit;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top:750px;
+    left:50%;
+    text-decoration: none;
+    color:#CEAC8F;
+    opacity:0;
+}
+
+@keyframes blinkit{
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }   
+}
+
+#navi{
+    z-index:2; 
+}
+nav {
+    padding: 4px 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    z-index: 2;
+    background: #DBCFB0;
+    width:100%;
+    height:42px;
+}
+nav a{
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size:1.2em;
+    display: block;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: #ddd;
+  border-radius: 5px;
+  color: black;
+    z-index:2;
+}
+nav > ul > li {
+  float: left;
+    padding: 0px 10px;
+  min-width:130px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+nav > ul > li:hover {
+  background: #d5d5d5;
+  border-radius: 5px;
+}
+
+ul.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
+}
+ul.drop-menu li {
+  background: #666;
+  color: rgba(255, 255, 255, 0.7);
+}
+ul.drop-menu li:hover {
+  background: #606060;
+}
+ul.drop-menu li:last-child {
+  border-radius: 0px 0px 5px 5px;
+}
+
+ul.drop-menu li {
+  display: none;
+}
+
+li:hover > ul.drop-menu li {
+  display: block;
+}
+
+li:hover > ul. drop-menu.menu1{
+    perspective: 1000px;
+}
+
+li:hover > ul.drop-menu li{
+    opacity:0;
+}
+
+li:hover > ul.drop-menu li:nth-child(1){
+       animation: menu1 0ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu li:nth-child(2){
+       animation: menu1 300ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu li:nth-child(3){
+       animation: menu1 600ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu li:nth-child(4){
+       animation: menu1 900ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+li:hover > ul.drop-menu li:nth-child(5){
+       animation: menu1 1200ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menu1
+{0% {opacity: 0; transform: rotateY(-90deg) translateY(30px)}
+100% {opacity:1; transform: rotateY(0deg) translateY(0px)}
+}
+
+#panel2 h2{
+    color:#40798C ;
+    font-size:3em;
+    text-align: center;
+    font-weight: bold;
+    padding-top:10px;
+    padding-bottom: 50px;
+}
+
+.skillcontent{
+    max-width: 900px;
+    max-height: 550px;
+    position:relative;
+    display: block;
+    margin: auto;    
+}
+
+#panel3 h2{
+    color: #CC7178;
+}
+
+#panel3 h3{
+    color:#BE7595;
+    font-size: 2em;
+}
+#panel3 p{
+    color: #9E3061;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ebebeb;
+}
+.panel3content{
+    padding-left:100px;
+}
+
+#panel4 h2{
+    color: #4F5D75;
+}
+#panel4 h3{
+    font-size:2em;
+    color: #404353;
+    text-align: right;
+    padding-right: 40px;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    padding-top:5px;
+}
+#panel4 li{
+    line-height:1.52m;
+    font-size: 1.2em;
+    color:#5E4955;
+}
+
+#panel4 ul{
+    width:90%;
+    margin:  2%;
+    min-width:200px;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 10px #9EA3B0;
+    font-family: Zilla Slab
+}
+
+#panel5 h2{
+    color: #3C493F;
+}
+#panel5 h3{
+    font-size:2em;
+    color: #721121;
+}
+#panel5 p{
+    color: #A5402D;
+    font-size:1.5em;
+}
+
+#panel6 h2{
+    color: #69585F;
+}
+
+#panel6 p{
+    color: #C98686;
+    font-size:1.5em;
+    line-height: 3em;
+}
